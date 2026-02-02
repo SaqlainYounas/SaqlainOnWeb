@@ -1,0 +1,77 @@
+import { Timestamp } from "firebase/firestore";
+import type { Project } from "@/lib/types/project";
+import type { Skill } from "@/lib/types/skill";
+
+// TODO: Replace with Firestore queries once collections are populated
+export const mockProjects: Project[] = [
+  {
+    id: "1",
+    title: "E-Commerce Platform",
+    slug: "e-commerce-platform",
+    description: "A full-stack e-commerce solution with real-time inventory management.",
+    longDescription: "Built a comprehensive e-commerce platform featuring product catalog, shopping cart, secure checkout, and an admin dashboard for managing orders and inventory in real-time.",
+    problem: "Small businesses needed an affordable, customizable online store without the complexity of enterprise solutions.",
+    solution: "Developed a modular e-commerce platform with a clean UI, real-time stock updates, and a streamlined admin panel that non-technical users can manage easily.",
+    techStack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS", "Stripe"],
+    category: "Web",
+    featured: true,
+    thumbnailUrl: "/projects/ecommerce.jpg",
+    images: ["/projects/ecommerce-1.jpg", "/projects/ecommerce-2.jpg"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/SaqlainYounas/ecommerce",
+    metrics: { users: 500, orders: "1.2k" },
+    createdAt: Timestamp.now(),
+    order: 1,
+  },
+  {
+    id: "2",
+    title: "Task Management App",
+    slug: "task-management-app",
+    description: "A collaborative task manager with real-time updates and team features.",
+    longDescription: "Designed and developed a project management tool that enables teams to collaborate on tasks with real-time syncing, drag-and-drop boards, and deadline tracking.",
+    problem: "Remote teams struggled with disjointed task tracking across multiple tools.",
+    solution: "Created a unified task management interface with real-time collaboration, intuitive kanban boards, and integrated notifications to keep teams aligned.",
+    techStack: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+    category: "Web",
+    featured: true,
+    thumbnailUrl: "/projects/taskmanager.jpg",
+    images: ["/projects/taskmanager-1.jpg"],
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/SaqlainYounas/taskmanager",
+    metrics: { teams: 50, tasks: "10k+" },
+    createdAt: Timestamp.now(),
+    order: 2,
+  },
+  {
+    id: "3",
+    title: "Portfolio Website",
+    slug: "portfolio-website",
+    description: "A modern developer portfolio with dark mode and dynamic content.",
+    longDescription: "Built a personal portfolio site with a focus on performance, accessibility, and clean design. Features dynamic project loading from Firebase and a contact form.",
+    problem: "Needed a professional online presence that showcases projects effectively.",
+    solution: "Designed a minimal yet impactful portfolio with smooth interactions, dark mode support, and Firebase-backed dynamic content.",
+    techStack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+    category: "Web",
+    featured: false,
+    thumbnailUrl: "/projects/portfolio.jpg",
+    images: [],
+    liveUrl: "https://saqlain.dev",
+    githubUrl: "https://github.com/SaqlainYounas/SaqlainOnWeb",
+    metrics: {},
+    createdAt: Timestamp.now(),
+    order: 3,
+  },
+];
+
+// TODO: Replace with Firestore queries once collections are populated
+export const mockSkills: Skill[] = [
+  { id: "1", name: "React", category: "Frontend", proficiency: 90, icon: "Code2", order: 1 },
+  { id: "2", name: "Next.js", category: "Frontend", proficiency: 85, icon: "Globe", order: 2 },
+  { id: "3", name: "TypeScript", category: "Languages", proficiency: 88, icon: "FileCode", order: 3 },
+  { id: "4", name: "Tailwind CSS", category: "Frontend", proficiency: 92, icon: "Paintbrush", order: 4 },
+  { id: "5", name: "Node.js", category: "Backend", proficiency: 80, icon: "Server", order: 5 },
+  { id: "6", name: "Firebase", category: "Backend", proficiency: 78, icon: "Database", order: 6 },
+  { id: "7", name: "MongoDB", category: "Backend", proficiency: 75, icon: "Database", order: 7 },
+  { id: "8", name: "Git", category: "Tools", proficiency: 85, icon: "GitBranch", order: 8 },
+  { id: "9", name: "Python", category: "Languages", proficiency: 70, icon: "FileCode", order: 9 },
+];
