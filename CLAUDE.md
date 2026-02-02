@@ -25,7 +25,10 @@ Next.js 16 portfolio site using App Router, React 19, TypeScript 5, and Tailwind
 - Styling: Tailwind CSS v4 via PostCSS (no tailwind.config — v4 uses CSS-based config in globals.css)
 - ESLint v9 flat config extending `next/core-web-vitals` and `next/typescript`
 - TypeScript strict mode enabled
+- Use comments sparingly, keep comments as natural as possible
 
 ## Git Rules
 
 - Do NOT include `Co-Authored-By` lines in commit messages
+- All commits must have a title and description
+- Include a list of newly created or modified files in the commit description
