@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { cn } from "@/lib/utils/cn";
 
 interface ProjectCardProps {
   project: {
@@ -16,31 +15,37 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className={cn(
-        "group flex flex-col rounded-lg border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-lg",
-        project.featured && "ring-1 ring-primary/20"
-      )}
+      className="group block"
     >
-      {project.featured && (
-        <span className="mb-3 w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
-          Featured
-        </span>
-      )}
-      <h3 className="mb-2 text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors">
-        {project.title}
-      </h3>
-      <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
-        {project.description}
-      </p>
-      <div className="flex flex-wrap gap-2">
-        {project.techStack.slice(0, 4).map((tech) => (
-          <span
-            key={tech}
-            className="rounded-md bg-muted px-2 py-1 text-xs text-muted-foreground"
-          >
-            {tech}
+      <div className="aspect-[4/3] bg-muted mb-4 overflow-hidden">
+        <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-muted to-border transition-transform duration-500 group-hover:scale-105">
+          <span className="font-mono text-4xl text-muted-foreground/30 uppercase">
+            {project.title.charAt(0)}
           </span>
-        ))}
+        </div>
+      </div>
+      <div className="space-y-2">
+        <div className="flex items-baseline justify-between gap-4">
+          <h3 className="font-mono text-sm text-foreground group-hover:text-accent transition-colors">
+            {project.title}
+          </h3>
+          <span className="font-mono text-xs text-muted-foreground">
+            {project.category}
+          </span>
+        </div>
+        <p className="font-mono text-xs text-muted-foreground line-clamp-2">
+          {project.description}
+        </p>
+        <div className="flex flex-wrap gap-x-3 gap-y-1 pt-1">
+          {project.techStack.slice(0, 3).map((tech) => (
+            <span
+              key={tech}
+              className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground/70"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </Link>
   );

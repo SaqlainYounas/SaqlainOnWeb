@@ -19,26 +19,38 @@ export default function Navbar() {
   }
 
   const themeIcon =
-    theme === "dark" ? <Moon className="h-5 w-5" /> :
-    theme === "light" ? <Sun className="h-5 w-5" /> :
-    <Monitor className="h-5 w-5" />;
+    theme === "dark" ? <Moon className="h-4 w-4" /> :
+    theme === "light" ? <Sun className="h-4 w-4" /> :
+    <Monitor className="h-4 w-4" />;
+
+  const now = new Date();
+  const dateString = `${now.getFullYear()} ${now.toLocaleString('en-US', { month: 'long' }).toLowerCase()}`;
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-        <Link href="/" className="text-lg font-semibold text-foreground">
-          Saqlain
-        </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background">
+      <div className="flex h-14 items-center justify-between px-4 md:px-6">
+        <div className="flex items-center gap-1">
+          <Link href="/" className="font-mono text-sm lowercase tracking-tight text-foreground hover:text-accent">
+            saqlain
+          </Link>
+          <span className="font-mono text-sm text-muted-foreground">.</span>
+          <Link href="/" className="font-mono text-sm lowercase tracking-tight text-foreground hover:text-accent">
+            dev
+          </Link>
+          <span className="ml-4 hidden font-mono text-xs text-muted-foreground sm:block">
+            {dateString}
+          </span>
+        </div>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-6 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm transition-colors hover:text-primary",
+                "font-mono text-xs lowercase tracking-wide transition-colors hover:text-accent",
                 pathname === link.href
-                  ? "font-medium text-primary"
+                  ? "text-foreground"
                   : "text-muted-foreground"
               )}
             >
@@ -48,24 +60,24 @@ export default function Navbar() {
           <button
             onClick={cycleTheme}
             aria-label={`Theme: ${theme}`}
-            className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground"
           >
             {themeIcon}
           </button>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={cycleTheme}
             aria-label={`Theme: ${theme}`}
-            className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground"
           >
             {themeIcon}
           </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
-            className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            className="text-muted-foreground transition-colors hover:text-foreground"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -73,16 +85,16 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-background px-6 pb-4 md:hidden">
+        <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
               className={cn(
-                "block py-3 text-sm transition-colors hover:text-primary",
+                "block py-3 font-mono text-sm lowercase transition-colors hover:text-accent",
                 pathname === link.href
-                  ? "font-medium text-primary"
+                  ? "text-foreground"
                   : "text-muted-foreground"
               )}
             >

@@ -16,14 +16,21 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <section className="mx-auto max-w-5xl px-6 pb-24">
-        <h2 className="mb-8 text-2xl font-bold text-foreground">
-          Featured Projects
-        </h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+      <section className="bg-muted">
+        <div className="px-4 md:px-6 py-24">
+          <div className="flex items-baseline justify-between mb-12">
+            <h2 className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              selected work
+            </h2>
+            <span className="font-mono text-xs text-muted-foreground">
+              {projects.length} projects
+            </span>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
         </div>
       </section>
     </>
