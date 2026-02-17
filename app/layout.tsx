@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/lib/contexts/theme-context";
 import { FirebaseAnalytics } from "@/components/firebase-analytics";
+import CustomCursor from "@/components/custom-cursor";
 import { Suspense } from "react";
 import "./globals.css";
 
@@ -36,7 +37,10 @@ export default function RootLayout({
         <Suspense>
           <FirebaseAnalytics />
         </Suspense>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <CustomCursor />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
