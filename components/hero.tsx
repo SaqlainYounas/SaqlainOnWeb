@@ -36,14 +36,20 @@ export default function Hero() {
             contact
           </Link>
           <span className="font-mono text-xs text-muted-foreground">/</span>
-          <a
-            href="/saqlain-resume.pdf"
-            download
-            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
+          <button
+            onClick={() => {
+              const a = document.createElement("a");
+              a.href = "/saqlain-resume.pdf";
+              a.download = "Saqlain-Resume.pdf";
+              document.body.appendChild(a);
+              a.click();
+              a.remove();
+            }}
+            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent cursor-pointer"
           >
             resume
             <Download className="h-3.5 w-3.5 transition-transform group-hover:translate-y-0.5" />
-          </a>
+          </button>
         </div>
       </div>
     </section>
