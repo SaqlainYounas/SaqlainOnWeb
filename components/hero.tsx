@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import ScrambleText from "./scramble-text";
 import IpClock from "./ip-clock";
 
@@ -35,6 +35,15 @@ export default function Hero() {
           >
             contact
           </Link>
+          <span className="font-mono text-xs text-muted-foreground">/</span>
+          <a
+            href="/saqlain-resume.pdf"
+            download
+            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
+          >
+            resume
+            <Download className="h-3.5 w-3.5 transition-transform group-hover:translate-y-0.5" />
+          </a>
         </div>
       </div>
     </section>

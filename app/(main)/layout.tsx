@@ -12,7 +12,6 @@ export default function MainLayout({
       <DotGrid />
       <Navbar />
       <main className="min-h-screen relative z-10">{children}</main>
-      <Footer />
     </>
   );
 }
