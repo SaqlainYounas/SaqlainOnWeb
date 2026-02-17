@@ -21,7 +21,6 @@ export default function ScrambleText({
   const [isScrambling, setIsScrambling] = useState(false);
 
   const scramble = useCallback(() => {
-    if (isScrambling) return;
     setIsScrambling(true);
 
     let iteration = 0;
@@ -49,12 +48,13 @@ export default function ScrambleText({
     }, 30);
 
     return () => clearInterval(interval);
-  }, [text, isScrambling]);
+  }, [text]);
 
   useEffect(() => {
     const timer = setTimeout(scramble, delay);
     return () => clearTimeout(timer);
-  }, [delay, scramble]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleMouseEnter = () => {
     if (scrambleOnHover) {

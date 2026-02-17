@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import ScrambleText from "./scramble-text";
+import IpClock from "./ip-clock";
 
 export default function Hero() {
   return (
@@ -11,9 +12,10 @@ export default function Hero() {
         <p className="mb-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
           full-stack developer
         </p>
-        <h1 className="mb-8 text-5xl font-medium tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="mb-4 text-5xl font-medium tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
           <ScrambleText text="saqlain" delay={300} scrambleOnHover />
         </h1>
+        <IpClock />
         <p className="mb-12 max-w-lg font-mono text-sm leading-relaxed text-muted-foreground">
           building modern web applications with clean code and thoughtful design.
           focused on creating seamless digital experiences.

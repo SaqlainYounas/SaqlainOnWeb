@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Sun, Moon, Monitor } from "lucide-react";
@@ -22,6 +22,11 @@ export default function Navbar() {
     theme === "dark" ? <Moon className="h-4 w-4" /> :
     theme === "light" ? <Sun className="h-4 w-4" /> :
     <Monitor className="h-4 w-4" />;
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
 
   const now = new Date();
   const dateString = `${now.getFullYear()} ${now.toLocaleString('en-US', { month: 'long' }).toLowerCase()}`;
@@ -85,7 +90,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-background px-4 pb-4 md:hidden">
+        <div className="fixed inset-0 top-14 z-50 overflow-hidden bg-background px-4 pt-4 md:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
