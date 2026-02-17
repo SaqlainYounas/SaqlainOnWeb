@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     template: "%s | Saqlain",
   },
   description: "Full-stack developer building modern web applications with clean code and thoughtful design.",
-  metadataBase: new URL("https://saqlain.dev"),
+  metadataBase: new URL("https://saqlain-on-web-saqlainyounas-projects.vercel.app"),
   openGraph: {
     title: "muhammad saqlain younas",
     description: "full-stack developer building modern web applications with clean code and thoughtful design.",
-    url: "https://saqlain.dev",
+    url: "https://saqlain-on-web-saqlainyounas-projects.vercel.app",
     siteName: "saqlain.dev",
     locale: "en_US",
     type: "website",
