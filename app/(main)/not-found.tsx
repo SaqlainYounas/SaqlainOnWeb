@@ -1,16 +1,46 @@
+"use client";
+
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import ScrambleText from "@/components/scramble-text";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 px-6 text-center">
-      <h1 className="text-6xl font-bold text-foreground">404</h1>
-      <p className="text-xl text-muted-foreground">Page not found</p>
-      <Link
-        href="/"
-        className="mt-4 rounded-lg bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-light"
-      >
-        Go Home
-      </Link>
-    </div>
+    <section className="relative min-h-screen flex flex-col justify-center px-4 md:px-6 pt-14">
+      <div className="relative z-10 max-w-4xl">
+        <p className="mb-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          error 404
+        </p>
+        <h1 className="mb-4 text-5xl font-medium tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+          <ScrambleText text="not found" delay={300} />
+        </h1>
+        <p className="mb-12 max-w-lg font-mono text-sm leading-relaxed text-muted-foreground">
+          the page you&apos;re looking for doesn&apos;t exist or has been moved.
+        </p>
+        <div className="flex flex-wrap items-center gap-4">
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-foreground transition-colors hover:text-accent"
+          >
+            go home
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+          <span className="font-mono text-xs text-muted-foreground">/</span>
+          <Link
+            href="/projects"
+            className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
+          >
+            projects
+          </Link>
+          <span className="font-mono text-xs text-muted-foreground">/</span>
+          <Link
+            href="/contact"
+            className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
+          >
+            contact
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

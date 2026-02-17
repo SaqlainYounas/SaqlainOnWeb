@@ -21,7 +21,21 @@ export const metadata: Metadata = {
     default: "Saqlain | Portfolio",
     template: "%s | Saqlain",
   },
-  description: "Full-stack developer portfolio showcasing projects and skills.",
+  description: "Full-stack developer building modern web applications with clean code and thoughtful design.",
+  metadataBase: new URL("https://saqlain.dev"),
+  openGraph: {
+    title: "muhammad saqlain younas",
+    description: "full-stack developer building modern web applications with clean code and thoughtful design.",
+    url: "https://saqlain.dev",
+    siteName: "saqlain.dev",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "muhammad saqlain younas",
+    description: "full-stack developer building modern web applications with clean code and thoughtful design.",
+  },
 };
 
 export default function RootLayout({
