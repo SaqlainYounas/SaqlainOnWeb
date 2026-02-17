@@ -1,15 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import ScrambleText from "./scramble-text";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-4 md:px-6 pt-14">
-      <div className="max-w-4xl">
+    <section className="relative min-h-screen flex flex-col justify-center px-4 md:px-6 pt-14">
+      <div className="relative z-10 max-w-4xl">
         <p className="mb-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
           full-stack developer
         </p>
         <h1 className="mb-8 text-5xl font-medium tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
-          saqlain
+          <ScrambleText text="saqlain" delay={300} scrambleOnHover />
         </h1>
         <p className="mb-12 max-w-lg font-mono text-sm leading-relaxed text-muted-foreground">
           building modern web applications with clean code and thoughtful design.
