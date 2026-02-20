@@ -7,15 +7,9 @@ import { cn } from "@/lib/utils/cn";
 import { useActiveSection } from "@/lib/hooks/use-active-section";
 import content from "@/content.json";
 
-const { navbar } = content;
+const { navbar, navigation } = content;
 
-const SECTIONS = [
-  { id: "hero", label: "home" },
-  { id: "projects", label: "projects" },
-  { id: "about", label: "about" },
-  { id: "contact", label: "contact" },
-];
-
+const SECTIONS = navigation.sections;
 const SECTION_IDS = SECTIONS.map((s) => s.id);
 
 export default function Navbar() {

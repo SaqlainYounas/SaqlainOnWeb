@@ -2,15 +2,12 @@
 
 import { cn } from "@/lib/utils/cn";
 import { useActiveSection } from "@/lib/hooks/use-active-section";
+import content from "@/content.json";
 
-const SECTIONS = [
-  { id: "hero", label: "home" },
-  { id: "projects", label: "projects" },
-  { id: "about", label: "about" },
-  { id: "contact", label: "contact" },
-];
+const { sections } = content.navigation;
+const { aria } = content.navbar;
 
-const SECTION_IDS = SECTIONS.map((s) => s.id);
+const SECTION_IDS = sections.map((s) => s.id);
 
 export default function SectionNav() {
   const activeSection = useActiveSection(SECTION_IDS);
@@ -21,11 +18,11 @@ export default function SectionNav() {
 
   return (
     <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-end gap-5">
-      {SECTIONS.map(({ id, label }) => (
+      {sections.map(({ id, label }) => (
         <button
           key={id}
           onClick={() => scrollTo(id)}
-          aria-label={`Navigate to ${label} section`}
+          aria-label={aria.sectionNav.replace("{label}", label)}
           className="group flex items-center gap-3 cursor-pointer"
         >
           <span

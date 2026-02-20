@@ -86,11 +86,11 @@ export default function HomePage() {
         {/* Scroll indicator */}
         <button
           onClick={() => scrollToSection("projects")}
-          aria-label="Scroll to projects"
+          aria-label={hero.scrollAriaLabel}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors cursor-pointer group"
         >
           <span className="font-mono text-xs uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">
-            scroll
+            {hero.scrollIndicator}
           </span>
           <ChevronDown className="h-4 w-4 animate-bounce" />
         </button>

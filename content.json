@@ -22,15 +22,16 @@
     },
     "aria": {
       "themeToggle": "Theme: {theme}",
-      "menuToggle": "Toggle menu"
+      "menuToggle": "Toggle menu",
+      "sectionNav": "Navigate to {label} section"
     }
   },
   "navigation": {
-    "links": [
-      { "href": "/", "label": "Home" },
-      { "href": "/projects", "label": "Projects" },
-      { "href": "/about", "label": "About" },
-      { "href": "/contact", "label": "Contact" }
+    "sections": [
+      { "id": "hero", "label": "home" },
+      { "id": "projects", "label": "projects" },
+      { "id": "about", "label": "about" },
+      { "id": "contact", "label": "contact" }
     ],
     "social": {
       "github": "https://github.com/SaqlainYounas",
@@ -56,7 +57,9 @@
       "projects": "view projects",
       "contact": "contact",
       "resume": "resume"
-    }
+    },
+    "scrollIndicator": "scroll",
+    "scrollAriaLabel": "Scroll to projects"
   },
   "about": {
     "label": "about",
