@@ -31,7 +31,7 @@ export default function ProjectPage() {
       <article>
         <section className="px-4 md:px-6 py-24">
           <Link
-            href="/projects"
+            href="/#projects"
             className="group mb-12 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
           >
             <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" /> {detail.backLink}
@@ -109,7 +109,7 @@ export default function ProjectPage() {
 
         <section className="px-4 md:px-6 py-16">
           <Link
-            href="/projects"
+            href="/#projects"
             className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
           >
             {detail.viewAllLink}

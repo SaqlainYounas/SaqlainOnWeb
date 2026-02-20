@@ -30,7 +30,7 @@ export default function DotGrid({ className = "" }: DotGridProps) {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    const spacing = 50;
+    const spacing = 36;
     const baseRadius = 1.5;
     const maxRadius = 4;
     const influenceRadius = 120;

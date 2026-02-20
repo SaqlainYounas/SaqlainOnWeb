@@ -30,14 +30,14 @@ export default function NotFound() {
           </Link>
           <span className="font-mono text-xs text-muted-foreground">/</span>
           <Link
-            href="/projects"
+            href="/#projects"
             className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
           >
             {notFoundContent.links.projects}
           </Link>
           <span className="font-mono text-xs text-muted-foreground">/</span>
           <Link
-            href="/contact"
+            href="/#contact"
             className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
           >
             {notFoundContent.links.contact}

@@ -65,6 +65,13 @@
       "results-driven full-stack software engineer with 5+ years of experience. i build scalable, high-performance web applications with an emphasis on ux, clean architecture, and seamless integrations.",
       "currently integrating ai into my development workflow to improve efficiency, code quality, and problem-solving. outside of work, you'll find me traveling, road-tripping, exploring new coffee, or learning something new."
     ],
+    "stats": [
+      { "value": "5+", "label": "years experience" },
+      { "value": "20+", "label": "projects shipped" },
+      { "value": "10+", "label": "technologies" }
+    ],
+    "currentFocus": "currently: integrating ai into workflow",
+    "availability": "open to new opportunities",
     "skillsSectionLabel": "skills & technologies"
   },
   "projects": {
