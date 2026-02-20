@@ -12,15 +12,14 @@ import { getAllSkills } from "@/lib/services/skills";
 import { SOCIAL_LINKS } from "@/lib/constants/navigation";
 import type { Project } from "@/lib/types/project";
 import type { Skill } from "@/lib/types/skill";
-import content from "@/content.json";
-
-const { hero, about, projects, contact } = content;
+import { useContent } from "@/lib/contexts/i18n-context";
 
 function scrollToSection(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
 export default function HomePage() {
+  const { hero, about, projects, contact } = useContent();
   const [projectList, setProjectList] = useState<Project[]>([]);
   const [skills, setSkills] = useState<Skill[]>([]);
 

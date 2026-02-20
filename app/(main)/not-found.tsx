@@ -3,11 +3,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import ScrambleText from "@/components/scramble-text";
-import content from "@/content.json";
-
-const { notFound: notFoundContent } = content;
+import { useContent } from "@/lib/contexts/i18n-context";
 
 export default function NotFound() {
+  const { notFound: notFoundContent } = useContent();
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-4 md:px-6 pt-14">
       <div className="relative z-10 max-w-4xl">

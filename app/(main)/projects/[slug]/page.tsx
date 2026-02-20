@@ -7,12 +7,11 @@ import { notFound } from "next/navigation";
 import { ExternalLink, Github, ArrowLeft, ArrowRight } from "lucide-react";
 import { getProjectBySlug } from "@/lib/services/projects";
 import type { Project } from "@/lib/types/project";
-import content from "@/content.json";
-
-const { detail } = content.projects;
+import { useContent } from "@/lib/contexts/i18n-context";
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
+  const { projects: { detail } } = useContent();
   const [project, setProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
 

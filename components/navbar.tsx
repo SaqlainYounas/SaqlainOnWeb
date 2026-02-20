@@ -3,19 +3,21 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon, Monitor } from "lucide-react";
 import { useTheme } from "@/lib/contexts/theme-context";
+import { useContent } from "@/lib/contexts/i18n-context";
 import { cn } from "@/lib/utils/cn";
 import { useActiveSection } from "@/lib/hooks/use-active-section";
-import content from "@/content.json";
+import LanguageSelector from "@/components/language-selector";
 
-const { navbar, navigation } = content;
-
-const SECTIONS = navigation.sections;
-const SECTION_IDS = SECTIONS.map((s) => s.id);
+// Section IDs are stable DOM identifiers — never translated
+const SECTION_IDS = ["hero", "projects", "about", "contact"] as const;
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, setTheme } = useTheme();
-  const activeSection = useActiveSection(SECTION_IDS);
+  const { navbar, navigation } = useContent();
+  const activeSection = useActiveSection([...SECTION_IDS]);
+
+  const SECTIONS = navigation.sections;
 
   function cycleTheme() {
     const next =
@@ -70,8 +72,9 @@ export default function Navbar() {
           </span>
         </div>
 
-        {/* Desktop: theme toggle only — section nav is on the right-side dots */}
-        <div className="hidden md:flex items-center">
+        {/* Desktop: language selector + theme toggle */}
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSelector />
           <button
             onClick={cycleTheme}
             aria-label={navbar.aria.themeToggle.replace("{theme}", theme)}
@@ -81,8 +84,9 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile: theme toggle + hamburger */}
+        {/* Mobile: language selector + theme toggle + hamburger */}
         <div className="flex items-center gap-3 md:hidden">
+          <LanguageSelector />
           <button
             onClick={cycleTheme}
             aria-label={navbar.aria.themeToggle.replace("{theme}", theme)}

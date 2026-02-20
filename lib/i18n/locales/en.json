@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "title": {
+      "default": "Saqlain | Portfolio",
+      "template": "%s | Saqlain"
+    },
+    "description": "Full-Stack Software Engineer with 5+ years of experience building scalable, high-performance web applications with an emphasis on UX, clean architecture, and seamless integrations.",
+    "openGraph": {
+      "title": "muhammad saqlain younas",
+      "description": "full-stack software engineer with 5+ years of experience building scalable, high-performance web applications.",
+      "siteName": "saqlain.dev"
+    },
+    "twitter": {
+      "title": "muhammad saqlain younas",
+      "description": "full-stack software engineer with 5+ years of experience building scalable, high-performance web applications."
+    }
+  },
+  "navbar": {
+    "brand": {
+      "name": "saqlain",
+      "tld": "dev"
+    },
+    "aria": {
+      "themeToggle": "Theme: {theme}",
+      "menuToggle": "Toggle menu",
+      "sectionNav": "Navigate to {label} section"
+    }
+  },
+  "navigation": {
+    "sections": [
+      { "id": "hero", "label": "home" },
+      { "id": "projects", "label": "projects" },
+      { "id": "about", "label": "about" },
+      { "id": "contact", "label": "contact" }
+    ],
+    "social": {
+      "github": "https://github.com/SaqlainYounas",
+      "linkedin": "https://linkedin.com/in/saqlain",
+      "twitter": "https://twitter.com/saqlain",
+      "email": "mailto:saqoo1005@gmail.com"
+    }
+  },
+  "footer": {
+    "links": [
+      { "label": "github" },
+      { "label": "linkedin" },
+      { "label": "twitter" },
+      { "label": "email" }
+    ],
+    "copyright": "© saqlain"
+  },
+  "hero": {
+    "label": "full-stack software engineer",
+    "name": "saqlain",
+    "description": "results-driven software engineer with 5+ years of experience. i build scalable, high-performance web applications with an emphasis on ux, clean architecture, and seamless integrations.",
+    "cta": {
+      "projects": "view projects",
+      "contact": "contact",
+      "resume": "resume"
+    },
+    "scrollIndicator": "scroll",
+    "scrollAriaLabel": "Scroll to projects"
+  },
+  "about": {
+    "label": "about",
+    "name": "saqlain younas",
+    "bio": [
+      "results-driven full-stack software engineer with 5+ years of experience. i build scalable, high-performance web applications with an emphasis on ux, clean architecture, and seamless integrations.",
+      "currently integrating ai into my development workflow to improve efficiency, code quality, and problem-solving. outside of work, you'll find me traveling, road-tripping, exploring new coffee, or learning something new."
+    ],
+    "stats": [
+      { "value": "5+", "label": "years experience" },
+      { "value": "20+", "label": "projects shipped" },
+      { "value": "10+", "label": "technologies" }
+    ],
+    "currentFocus": "currently: integrating ai into workflow",
+    "availability": "open to new opportunities",
+    "skillsSectionLabel": "skills & technologies"
+  },
+  "projects": {
+    "label": "work",
+    "heading": "projects",
+    "countSuffix": "projects",
+    "detail": {
+      "backLink": "back to projects",
+      "viewLive": "view live",
+      "viewCode": "view code",
+      "viewAllLink": "view all projects",
+      "problemLabel": "the problem",
+      "solutionLabel": "the solution"
+    }
+  },
+  "contact": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Get in touch with me."
+    },
+    "label": "contact",
+    "heading": "get in touch",
+    "description": "have a question or want to work together? fill out the form below and i'll get back to you as soon as possible.",
+    "email": "saqoo1005@gmail.com",
+    "formSectionLabel": "send a message"
+  },
+  "contactForm": {
+    "fields": {
+      "name": {
+        "label": "name",
+        "placeholder": "your name"
+      },
+      "email": {
+        "label": "email",
+        "placeholder": "you@example.com"
+      },
+      "message": {
+        "label": "message",
+        "placeholder": "tell me about your project..."
+      }
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "emailInvalid": "Invalid email address",
+      "messageMin": "Message must be at least 10 characters"
+    },
+    "submit": {
+      "idle": "send message",
+      "loading": "sending..."
+    },
+    "success": {
+      "heading": "message sent successfully",
+      "subtext": "i'll get back to you soon",
+      "reset": "send another message"
+    },
+    "error": "something went wrong. please try again."
+  },
+  "notFound": {
+    "label": "error 404",
+    "heading": "not found",
+    "description": "the page you're looking for doesn't exist or has been moved.",
+    "links": {
+      "home": "go home",
+      "projects": "projects",
+      "contact": "contact"
+    }
+  },
+  "error": {
+    "heading": "Something went wrong",
+    "description": "An unexpected error occurred. Please try again.",
+    "retry": "Try again"
+  },
+  "opengraphImage": {
+    "alt": "muhammad saqlain younas - full-stack software engineer",
+    "label": "full-stack software engineer",
+    "name": "saqlain",
+    "tld": ".dev",
+    "description": "results-driven software engineer with 5+ years of experience building scalable, high-performance web applications."
+  }
+}

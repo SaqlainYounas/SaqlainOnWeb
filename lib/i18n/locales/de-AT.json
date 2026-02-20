@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "title": {
+      "default": "Saqlain | Portfolio",
+      "template": "%s | Saqlain"
+    },
+    "description": "Full-Stack-Softwareentwickler mit über 5 Jahren Erfahrung in der Entwicklung skalierbarer, leistungsstarker Webanwendungen mit Schwerpunkt auf UX, sauberer Architektur und nahtlosen Integrationen.",
+    "openGraph": {
+      "title": "muhammad saqlain younas",
+      "description": "full-stack-softwareentwickler mit über 5 jahren erfahrung in der entwicklung skalierbarer, leistungsstarker webanwendungen.",
+      "siteName": "saqlain.dev"
+    },
+    "twitter": {
+      "title": "muhammad saqlain younas",
+      "description": "full-stack-softwareentwickler mit über 5 jahren erfahrung in der entwicklung skalierbarer, leistungsstarker webanwendungen."
+    }
+  },
+  "navbar": {
+    "brand": {
+      "name": "saqlain",
+      "tld": "dev"
+    },
+    "aria": {
+      "themeToggle": "Design: {theme}",
+      "menuToggle": "Menü umschalten",
+      "sectionNav": "Zu {label} navigieren"
+    }
+  },
+  "navigation": {
+    "sections": [
+      { "id": "hero", "label": "start" },
+      { "id": "projects", "label": "projekte" },
+      { "id": "about", "label": "über mich" },
+      { "id": "contact", "label": "kontakt" }
+    ],
+    "social": {
+      "github": "https://github.com/SaqlainYounas",
+      "linkedin": "https://linkedin.com/in/saqlain",
+      "twitter": "https://twitter.com/saqlain",
+      "email": "mailto:saqoo1005@gmail.com"
+    }
+  },
+  "footer": {
+    "links": [
+      { "label": "github" },
+      { "label": "linkedin" },
+      { "label": "twitter" },
+      { "label": "email" }
+    ],
+    "copyright": "© saqlain"
+  },
+  "hero": {
+    "label": "full-stack-softwareentwickler",
+    "name": "saqlain",
+    "description": "ergebnisorientierter softwareentwickler mit über 5 jahren erfahrung. ich entwickle skalierbare, leistungsstarke webanwendungen mit schwerpunkt auf ux, sauberer architektur und nahtlosen integrationen.",
+    "cta": {
+      "projects": "projekte ansehen",
+      "contact": "kontakt",
+      "resume": "lebenslauf"
+    },
+    "scrollIndicator": "scrollen",
+    "scrollAriaLabel": "Zu den Projekten scrollen"
+  },
+  "about": {
+    "label": "über mich",
+    "name": "saqlain younas",
+    "bio": [
+      "ergebnisorientierter full-stack-softwareentwickler mit über 5 jahren erfahrung. ich entwickle skalierbare, leistungsstarke webanwendungen mit schwerpunkt auf ux, sauberer architektur und nahtlosen integrationen.",
+      "im moment integriere ich ki in meinen entwicklungsworkflow, um effizienz, codequalität und problemlösung zu verbessern. in meiner freizeit bin ich gerne auf reisen, road trips, probiere neuen kaffee aus oder lerne etwas neues dazu."
+    ],
+    "stats": [
+      { "value": "5+", "label": "jahre erfahrung" },
+      { "value": "20+", "label": "projekte umgesetzt" },
+      { "value": "10+", "label": "technologien" }
+    ],
+    "currentFocus": "aktuell: ki in den workflow integrieren",
+    "availability": "offen für neue möglichkeiten",
+    "skillsSectionLabel": "kenntnisse & technologien"
+  },
+  "projects": {
+    "label": "arbeit",
+    "heading": "projekte",
+    "countSuffix": "projekte",
+    "detail": {
+      "backLink": "zurück zu projekte",
+      "viewLive": "live ansehen",
+      "viewCode": "code ansehen",
+      "viewAllLink": "alle projekte ansehen",
+      "problemLabel": "das problem",
+      "solutionLabel": "die lösung"
+    }
+  },
+  "contact": {
+    "metadata": {
+      "title": "Kontakt",
+      "description": "Nimm Kontakt mit mir auf."
+    },
+    "label": "kontakt",
+    "heading": "kontakt aufnehmen",
+    "description": "hast du eine frage oder möchtest du zusammenarbeiten? füll das formular aus und ich melde mich so bald wie möglich.",
+    "email": "saqoo1005@gmail.com",
+    "formSectionLabel": "nachricht schicken"
+  },
+  "contactForm": {
+    "fields": {
+      "name": {
+        "label": "name",
+        "placeholder": "dein name"
+      },
+      "email": {
+        "label": "e-mail",
+        "placeholder": "du@beispiel.at"
+      },
+      "message": {
+        "label": "nachricht",
+        "placeholder": "erzähl mir von deinem projekt..."
+      }
+    },
+    "validation": {
+      "nameMin": "Der Name muss mindestens 2 Zeichen lang sein",
+      "emailInvalid": "Ungültige E-Mail-Adresse",
+      "messageMin": "Die Nachricht muss mindestens 10 Zeichen lang sein"
+    },
+    "submit": {
+      "idle": "nachricht schicken",
+      "loading": "wird gesendet..."
+    },
+    "success": {
+      "heading": "nachricht erfolgreich gesendet",
+      "subtext": "ich melde mich bald",
+      "reset": "weitere nachricht schicken"
+    },
+    "error": "etwas ist schiefgelaufen. bitte probier es nochmal."
+  },
+  "notFound": {
+    "label": "fehler 404",
+    "heading": "nicht gefunden",
+    "description": "die seite, die du suchst, gibt es nicht oder sie wurde verschoben.",
+    "links": {
+      "home": "zur startseite",
+      "projects": "projekte",
+      "contact": "kontakt"
+    }
+  },
+  "error": {
+    "heading": "Da ist was schiefgelaufen",
+    "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte probier es nochmal.",
+    "retry": "Nochmal versuchen"
+  },
+  "opengraphImage": {
+    "alt": "muhammad saqlain younas - full-stack software engineer",
+    "label": "full-stack software engineer",
+    "name": "saqlain",
+    "tld": ".dev",
+    "description": "results-driven software engineer with 5+ years of experience building scalable, high-performance web applications."
+  }
+}

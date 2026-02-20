@@ -2,15 +2,16 @@
 
 import { cn } from "@/lib/utils/cn";
 import { useActiveSection } from "@/lib/hooks/use-active-section";
-import content from "@/content.json";
+import { useContent } from "@/lib/contexts/i18n-context";
 
-const { sections } = content.navigation;
-const { aria } = content.navbar;
-
-const SECTION_IDS = sections.map((s) => s.id);
+// Section IDs are stable DOM identifiers — never translated
+const SECTION_IDS = ["hero", "projects", "about", "contact"] as const;
 
 export default function SectionNav() {
-  const activeSection = useActiveSection(SECTION_IDS);
+  const { navigation, navbar } = useContent();
+  const { sections } = navigation;
+  const { aria } = navbar;
+  const activeSection = useActiveSection([...SECTION_IDS]);
 
   function scrollTo(id: string) {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });

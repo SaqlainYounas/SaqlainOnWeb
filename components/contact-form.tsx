@@ -1,26 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { Loader2, ArrowRight } from "lucide-react";
-import content from "@/content.json";
+import { useContent } from "@/lib/contexts/i18n-context";
 
-const { fields, validation, submit, success, error } = content.contactForm;
-
-const contactSchema = z.object({
-  name: z.string().min(2, validation.nameMin),
-  email: z.string().email(validation.emailInvalid),
-  message: z.string().min(10, validation.messageMin),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 export default function ContactForm() {
+  const { contactForm } = useContent();
+  const { fields, validation, submit, success, error } = contactForm;
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const contactSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, validation.nameMin),
+        email: z.string().email(validation.emailInvalid),
+        message: z.string().min(10, validation.messageMin),
+      }),
+    [validation.nameMin, validation.emailInvalid, validation.messageMin]
+  );
 
   const {
     register,

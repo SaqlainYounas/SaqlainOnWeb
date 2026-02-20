@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "title": {
+      "default": "Saqlain | Portfolio",
+      "template": "%s | Saqlain"
+    },
+    "description": "Full-stack mjukvaruutvecklare med över 5 års erfarenhet av att bygga skalbara, högpresterande webbapplikationer med fokus på UX, ren arkitektur och sömlösa integrationer.",
+    "openGraph": {
+      "title": "muhammad saqlain younas",
+      "description": "full-stack mjukvaruutvecklare med över 5 års erfarenhet av att bygga skalbara, högpresterande webbapplikationer.",
+      "siteName": "saqlain.dev"
+    },
+    "twitter": {
+      "title": "muhammad saqlain younas",
+      "description": "full-stack mjukvaruutvecklare med över 5 års erfarenhet av att bygga skalbara, högpresterande webbapplikationer."
+    }
+  },
+  "navbar": {
+    "brand": {
+      "name": "saqlain",
+      "tld": "dev"
+    },
+    "aria": {
+      "themeToggle": "Tema: {theme}",
+      "menuToggle": "Växla meny",
+      "sectionNav": "Navigera till {label}"
+    }
+  },
+  "navigation": {
+    "sections": [
+      { "id": "hero", "label": "hem" },
+      { "id": "projects", "label": "projekt" },
+      { "id": "about", "label": "om mig" },
+      { "id": "contact", "label": "kontakt" }
+    ],
+    "social": {
+      "github": "https://github.com/SaqlainYounas",
+      "linkedin": "https://linkedin.com/in/saqlain",
+      "twitter": "https://twitter.com/saqlain",
+      "email": "mailto:saqoo1005@gmail.com"
+    }
+  },
+  "footer": {
+    "links": [
+      { "label": "github" },
+      { "label": "linkedin" },
+      { "label": "twitter" },
+      { "label": "email" }
+    ],
+    "copyright": "© saqlain"
+  },
+  "hero": {
+    "label": "full-stack mjukvaruutvecklare",
+    "name": "saqlain",
+    "description": "resultatorienterad mjukvaruutvecklare med över 5 års erfarenhet. jag bygger skalbara, högpresterande webbapplikationer med fokus på ux, ren arkitektur och sömlösa integrationer.",
+    "cta": {
+      "projects": "visa projekt",
+      "contact": "kontakt",
+      "resume": "cv"
+    },
+    "scrollIndicator": "scrolla",
+    "scrollAriaLabel": "Scrolla till projekt"
+  },
+  "about": {
+    "label": "om mig",
+    "name": "saqlain younas",
+    "bio": [
+      "resultatorienterad full-stack mjukvaruutvecklare med över 5 års erfarenhet. jag bygger skalbara, högpresterande webbapplikationer med fokus på ux, ren arkitektur och sömlösa integrationer.",
+      "integrerar för närvarande ai i mitt utvecklingsarbetsflöde för att förbättra effektivitet, kodkvalitet och problemlösning. utanför jobbet hittar du mig på resor, road trips, utforskar nytt kaffe eller lär mig något nytt."
+    ],
+    "stats": [
+      { "value": "5+", "label": "års erfarenhet" },
+      { "value": "20+", "label": "levererade projekt" },
+      { "value": "10+", "label": "teknologier" }
+    ],
+    "currentFocus": "just nu: integrerar ai i arbetsflödet",
+    "availability": "öppen för nya möjligheter",
+    "skillsSectionLabel": "färdigheter & teknologier"
+  },
+  "projects": {
+    "label": "arbete",
+    "heading": "projekt",
+    "countSuffix": "projekt",
+    "detail": {
+      "backLink": "tillbaka till projekt",
+      "viewLive": "visa live",
+      "viewCode": "visa kod",
+      "viewAllLink": "visa alla projekt",
+      "problemLabel": "problemet",
+      "solutionLabel": "lösningen"
+    }
+  },
+  "contact": {
+    "metadata": {
+      "title": "Kontakt",
+      "description": "Ta kontakt med mig."
+    },
+    "label": "kontakt",
+    "heading": "ta kontakt",
+    "description": "har du en fråga eller vill samarbeta? fyll i formuläret nedan så återkommer jag så snart som möjligt.",
+    "email": "saqoo1005@gmail.com",
+    "formSectionLabel": "skicka ett meddelande"
+  },
+  "contactForm": {
+    "fields": {
+      "name": {
+        "label": "namn",
+        "placeholder": "ditt namn"
+      },
+      "email": {
+        "label": "e-post",
+        "placeholder": "du@exempel.com"
+      },
+      "message": {
+        "label": "meddelande",
+        "placeholder": "berätta om ditt projekt..."
+      }
+    },
+    "validation": {
+      "nameMin": "Namnet måste vara minst 2 tecken",
+      "emailInvalid": "Ogiltig e-postadress",
+      "messageMin": "Meddelandet måste vara minst 10 tecken"
+    },
+    "submit": {
+      "idle": "skicka meddelande",
+      "loading": "skickar..."
+    },
+    "success": {
+      "heading": "meddelande skickat",
+      "subtext": "jag återkommer snart",
+      "reset": "skicka ett till meddelande"
+    },
+    "error": "något gick fel. försök igen."
+  },
+  "notFound": {
+    "label": "fel 404",
+    "heading": "hittades inte",
+    "description": "sidan du letar efter finns inte eller har flyttats.",
+    "links": {
+      "home": "gå hem",
+      "projects": "projekt",
+      "contact": "kontakt"
+    }
+  },
+  "error": {
+    "heading": "Något gick fel",
+    "description": "Ett oväntat fel inträffade. Försök igen.",
+    "retry": "Försök igen"
+  },
+  "opengraphImage": {
+    "alt": "muhammad saqlain younas - full-stack software engineer",
+    "label": "full-stack software engineer",
+    "name": "saqlain",
+    "tld": ".dev",
+    "description": "results-driven software engineer with 5+ years of experience building scalable, high-performance web applications."
+  }
+}

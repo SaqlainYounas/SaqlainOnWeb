@@ -2,9 +2,7 @@
 
 import { useEffect } from "react";
 import { AlertCircle } from "lucide-react";
-import content from "@/content.json";
-
-const { error: errorContent } = content;
+import { useContent } from "@/lib/contexts/i18n-context";
 
 export default function Error({
   error,
@@ -13,6 +11,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const { error: errorContent } = useContent();
+
   useEffect(() => {
     console.error(error);
   }, [error]);
