@@ -7,6 +7,9 @@ import { Menu, X, Sun, Moon, Monitor } from "lucide-react";
 import { useTheme } from "@/lib/contexts/theme-context";
 import { NAV_LINKS } from "@/lib/constants/navigation";
 import { cn } from "@/lib/utils/cn";
+import content from "@/content.json";
+
+const { navbar } = content;
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -36,11 +39,11 @@ export default function Navbar() {
       <div className="flex h-14 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-1">
           <Link href="/" className="font-mono text-sm lowercase tracking-tight text-foreground hover:text-accent">
-            saqlain
+            {navbar.brand.name}
           </Link>
           <span className="font-mono text-sm text-muted-foreground">.</span>
           <Link href="/" className="font-mono text-sm lowercase tracking-tight text-foreground hover:text-accent">
-            dev
+            {navbar.brand.tld}
           </Link>
           <span className="ml-4 hidden font-mono text-xs text-muted-foreground sm:block">
             {dateString}
@@ -64,7 +67,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={cycleTheme}
-            aria-label={`Theme: ${theme}`}
+            aria-label={navbar.aria.themeToggle.replace("{theme}", theme)}
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             {themeIcon}
@@ -74,14 +77,14 @@ export default function Navbar() {
         <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={cycleTheme}
-            aria-label={`Theme: ${theme}`}
+            aria-label={navbar.aria.themeToggle.replace("{theme}", theme)}
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             {themeIcon}
           </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
+            aria-label={navbar.aria.menuToggle}
             className="text-muted-foreground transition-colors hover:text-foreground"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

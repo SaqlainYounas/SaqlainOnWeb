@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import SkillCard from "@/components/skill-card";
 import { getAllSkills } from "@/lib/services/skills";
 import type { Skill } from "@/lib/types/skill";
+import content from "@/content.json";
+
+const { about } = content;
 
 export default function AboutPage() {
   const [skills, setSkills] = useState<Skill[]>([]);
@@ -19,21 +22,15 @@ export default function AboutPage() {
       <section className="min-h-[70vh] flex flex-col justify-center px-4 md:px-6 py-24">
         <div className="max-w-3xl">
           <p className="mb-6 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            about
+            {about.label}
           </p>
           <h1 className="mb-8 text-4xl font-medium tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            saqlain younas
+            {about.name}
           </h1>
           <div className="max-w-xl space-y-6 font-mono text-sm leading-relaxed text-muted-foreground">
-            <p>
-              full-stack developer passionate about building modern web
-              applications with clean, maintainable code and great user experiences.
-            </p>
-            <p>
-              with experience across the full development stack, i enjoy turning
-              complex problems into simple, elegant solutions. always learning
-              new technologies and looking for interesting projects to work on.
-            </p>
+            {about.bio.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -41,7 +38,7 @@ export default function AboutPage() {
       <section className="bg-muted px-4 md:px-6 py-24">
         <div className="mb-12">
           <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-            skills & technologies
+            {about.skillsSectionLabel}
           </p>
         </div>
 

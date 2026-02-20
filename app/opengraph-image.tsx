@@ -1,7 +1,10 @@
 import { ImageResponse } from "next/og";
+import content from "@/content.json";
+
+const { opengraphImage } = content;
 
 export const runtime = "edge";
-export const alt = "muhammad saqlain younas - full-stack developer";
+export const alt = opengraphImage.alt;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -29,7 +32,7 @@ export default async function Image() {
             marginBottom: "24px",
           }}
         >
-          full-stack developer
+          {opengraphImage.label}
         </div>
         <div
           style={{
@@ -46,7 +49,7 @@ export default async function Image() {
               letterSpacing: "-2px",
             }}
           >
-            saqlain
+            {opengraphImage.name}
           </div>
           <div
             style={{
@@ -57,7 +60,7 @@ export default async function Image() {
               letterSpacing: "-2px",
             }}
           >
-            .dev
+            {opengraphImage.tld}
           </div>
         </div>
         <div
@@ -70,7 +73,7 @@ export default async function Image() {
             marginTop: "32px",
           }}
         >
-          building modern web applications with clean code and thoughtful design.
+          {opengraphImage.description}
         </div>
       </div>
     ),

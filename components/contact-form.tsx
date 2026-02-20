@@ -7,11 +7,14 @@ import { z } from "zod";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 import { Loader2, ArrowRight } from "lucide-react";
+import content from "@/content.json";
+
+const { fields, validation, submit, success, error } = content.contactForm;
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
+  name: z.string().min(2, validation.nameMin),
+  email: z.string().email(validation.emailInvalid),
+  message: z.string().min(10, validation.messageMin),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -46,13 +49,13 @@ export default function ContactForm() {
   if (status === "success") {
     return (
       <div className="py-12 text-center">
-        <p className="font-mono text-sm text-foreground mb-2">message sent successfully</p>
-        <p className="font-mono text-xs text-muted-foreground">i&apos;ll get back to you soon</p>
+        <p className="font-mono text-sm text-foreground mb-2">{success.heading}</p>
+        <p className="font-mono text-xs text-muted-foreground">{success.subtext}</p>
         <button
           onClick={() => setStatus("idle")}
           className="mt-6 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors"
         >
-          send another message
+          {success.reset}
         </button>
       </div>
     );
@@ -62,14 +65,14 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
         <label htmlFor="name" className="block font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">
-          name
+          {fields.name.label}
         </label>
         <input
           id="name"
           type="text"
           {...register("name")}
           className="w-full border-b border-border bg-transparent py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none transition-colors"
-          placeholder="your name"
+          placeholder={fields.name.placeholder}
         />
         {errors.name && (
           <p className="mt-2 font-mono text-xs text-destructive">{errors.name.message}</p>
@@ -78,14 +81,14 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="email" className="block font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">
-          email
+          {fields.email.label}
         </label>
         <input
           id="email"
           type="email"
           {...register("email")}
           className="w-full border-b border-border bg-transparent py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none transition-colors"
-          placeholder="you@example.com"
+          placeholder={fields.email.placeholder}
         />
         {errors.email && (
           <p className="mt-2 font-mono text-xs text-destructive">{errors.email.message}</p>
@@ -94,14 +97,14 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block font-mono text-xs uppercase tracking-widest text-muted-foreground mb-3">
-          message
+          {fields.message.label}
         </label>
         <textarea
           id="message"
           rows={5}
           {...register("message")}
           className="w-full resize-none border-b border-border bg-transparent py-3 font-mono text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-foreground focus:outline-none transition-colors"
-          placeholder="tell me about your project..."
+          placeholder={fields.message.placeholder}
         />
         {errors.message && (
           <p className="mt-2 font-mono text-xs text-destructive">{errors.message.message}</p>
@@ -116,11 +119,11 @@ export default function ContactForm() {
         >
           {status === "loading" ? (
             <>
-              <Loader2 className="h-4 w-4 animate-spin" /> sending...
+              <Loader2 className="h-4 w-4 animate-spin" /> {submit.loading}
             </>
           ) : (
             <>
-              send message
+              {submit.idle}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </>
           )}
@@ -129,7 +132,7 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p className="font-mono text-xs text-destructive">
-          something went wrong. please try again.
+          {error}
         </p>
       )}
     </form>

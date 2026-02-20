@@ -7,6 +7,9 @@ import { notFound } from "next/navigation";
 import { ExternalLink, Github, ArrowLeft, ArrowRight } from "lucide-react";
 import { getProjectBySlug } from "@/lib/services/projects";
 import type { Project } from "@/lib/types/project";
+import content from "@/content.json";
+
+const { detail } = content.projects;
 
 export default function ProjectPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -31,7 +34,7 @@ export default function ProjectPage() {
             href="/projects"
             className="group mb-12 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
           >
-            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" /> back to projects
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" /> {detail.backLink}
           </Link>
 
           <div className="max-w-3xl">
@@ -64,7 +67,7 @@ export default function ProjectPage() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-foreground transition-colors hover:text-accent"
                 >
-                  view live
+                  {detail.viewLive}
                   <ExternalLink className="h-4 w-4" />
                 </a>
               )}
@@ -75,7 +78,7 @@ export default function ProjectPage() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
                 >
-                  view code
+                  {detail.viewCode}
                   <Github className="h-4 w-4" />
                 </a>
               )}
@@ -87,7 +90,7 @@ export default function ProjectPage() {
           <div className="grid gap-16 md:grid-cols-2 max-w-4xl">
             <div>
               <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                the problem
+                {detail.problemLabel}
               </p>
               <p className="font-mono text-sm leading-relaxed text-foreground">
                 {project.problem}
@@ -95,7 +98,7 @@ export default function ProjectPage() {
             </div>
             <div>
               <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                the solution
+                {detail.solutionLabel}
               </p>
               <p className="font-mono text-sm leading-relaxed text-foreground">
                 {project.solution}
@@ -109,7 +112,7 @@ export default function ProjectPage() {
             href="/projects"
             className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-accent"
           >
-            view all projects
+            {detail.viewAllLink}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </section>

@@ -1,5 +1,10 @@
 {
   "permissions": {
-    "allow": ["mcp__playwright"]
+    "allow": [
+      "mcp__playwright",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force ''C:\\\\Users\\\\saqoo\\\\Desktop\\\\Saqlain\\\\saqlain-porfolio\\\\saqlain-on-web\\\\.next'' -ErrorAction SilentlyContinue; Set-Location ''C:\\\\Users\\\\saqoo\\\\Desktop\\\\Saqlain\\\\saqlain-porfolio\\\\saqlain-on-web''; npm run build 2>&1\")",
+      "Bash(powershell -Command \"Set-Location ''C:\\\\Users\\\\saqoo\\\\Desktop\\\\Saqlain\\\\saqlain-porfolio\\\\saqlain-on-web''; npm run dev\")",
+      "Bash(npm run build:*)"
+    ]
   }
 }

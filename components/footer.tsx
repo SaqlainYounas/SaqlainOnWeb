@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { SOCIAL_LINKS } from "@/lib/constants/navigation";
+import content from "@/content.json";
 
-const footerLinks = [
-  { href: SOCIAL_LINKS.github, label: "github" },
-  { href: SOCIAL_LINKS.linkedin, label: "linkedin" },
-  { href: SOCIAL_LINKS.twitter, label: "twitter" },
-  { href: SOCIAL_LINKS.email, label: "email" },
-];
+const { footer, navbar } = content;
+
+const footerLinks = (Object.entries(SOCIAL_LINKS) as [string, string][]).map(([key, href]) => ({
+  href,
+  label: key,
+}));
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="font-mono text-xs text-muted-foreground">
-            ©{new Date().getFullYear()} saqlain
+            ©{new Date().getFullYear()} {navbar.brand.name}
           </p>
         </div>
       </div>

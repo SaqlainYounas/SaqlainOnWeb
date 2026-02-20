@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/lib/contexts/theme-context";
 import { FirebaseAnalytics } from "@/components/firebase-analytics";
 import CustomCursor from "@/components/custom-cursor";
 import { Suspense } from "react";
+import content from "@/content.json";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,23 +19,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Saqlain | Portfolio",
-    template: "%s | Saqlain",
+    default: content.metadata.title.default,
+    template: content.metadata.title.template,
   },
-  description: "Full-stack developer building modern web applications with clean code and thoughtful design.",
+  description: content.metadata.description,
   metadataBase: new URL("https://saqlain-on-web-saqlainyounas-projects.vercel.app"),
   openGraph: {
-    title: "muhammad saqlain younas",
-    description: "full-stack developer building modern web applications with clean code and thoughtful design.",
+    title: content.metadata.openGraph.title,
+    description: content.metadata.openGraph.description,
     url: "https://saqlain-on-web-saqlainyounas-projects.vercel.app",
-    siteName: "saqlain.dev",
+    siteName: content.metadata.openGraph.siteName,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "muhammad saqlain younas",
-    description: "full-stack developer building modern web applications with clean code and thoughtful design.",
+    title: content.metadata.twitter.title,
+    description: content.metadata.twitter.description,
   },
 };
 
