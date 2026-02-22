@@ -74,3 +74,71 @@ body {
   background: var(--foreground);
   color: var(--background);
 }
+
+/* ─── Shepherd.js tour overrides ─────────────────────────────────── */
+.shepherd-element {
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--background) !important;
+  max-width: 296px !important;
+  font-family: var(--font-geist-mono), ui-monospace, monospace !important;
+}
+
+.shepherd-arrow::before {
+  background: var(--background) !important;
+  border-color: var(--border) !important;
+}
+
+.shepherd-header {
+  background: var(--background) !important;
+  padding: 14px 16px 0 !important;
+}
+
+.shepherd-title {
+  font-family: var(--font-geist-mono), ui-monospace, monospace !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: none !important;
+  color: var(--foreground) !important;
+}
+
+.shepherd-text {
+  font-family: var(--font-geist-mono), ui-monospace, monospace !important;
+  font-size: 11px !important;
+  line-height: 1.65 !important;
+  color: var(--muted-foreground) !important;
+  padding: 6px 16px 10px !important;
+}
+
+.shepherd-footer {
+  padding: 0 16px 14px !important;
+  border-top: none !important;
+}
+
+.shepherd-button,
+.shepherd-button.shepherd-button-primary {
+  font-family: var(--font-geist-mono), ui-monospace, monospace !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: var(--muted-foreground) !important;
+  border: none !important;
+  transition: color 0.15s !important;
+}
+
+.shepherd-button:hover,
+.shepherd-button.shepherd-button-primary:hover {
+  background: transparent !important;
+  color: var(--foreground) !important;
+  opacity: 1 !important;
+}
+
+.shepherd-modal-overlay-container {
+  opacity: 0.4 !important;
+}

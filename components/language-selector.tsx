@@ -39,6 +39,7 @@ export default function LanguageSelector() {
         onClick={() => setOpen((prev) => !prev)}
         aria-label={`Language: ${locale}`}
         aria-expanded={open}
+        data-tour="language-selector"
         className="font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
       >
         {LOCALE_LABELS[locale]}

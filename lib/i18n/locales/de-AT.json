@@ -147,6 +147,11 @@
     "description": "Ein unerwarteter Fehler ist aufgetreten. Bitte probier es nochmal.",
     "retry": "Nochmal versuchen"
   },
+  "languageTour": {
+    "title": "sprache auswählen",
+    "text": "wähle deine bevorzugte sprache aus dem dropdown. deine auswahl wird für künftige besuche gespeichert.",
+    "button": "alles klar"
+  },
   "opengraphImage": {
     "alt": "muhammad saqlain younas - full-stack software engineer",
     "label": "full-stack software engineer",
